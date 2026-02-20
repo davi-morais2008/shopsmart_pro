@@ -35,8 +35,8 @@ function desconto(){
 
     } else {
 
-        let desconto = (v1 * v2) / 100;
-        let total = v1 - desconto;
+        let valorDesconto = (v1 * v2) / 100;
+        let total = v1 - valorDesconto;
 
         resultado.style.display = 'flex';
         resultado.innerHTML =
@@ -84,14 +84,14 @@ function comissao(){
 
     } else {
 
-        let percentual = (v1 * v2)/100
+        let valorComissao = (v1 * v2)/100
 
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p><strong>Resumo da comissão:</strong></p>
-        <p>Valor base: <strong>R$ ${v1.toFixed(2)}</strong></p>
-        <p>Percentual (${v2}%): <strong>R$ ${percentual.toFixed(2)}</strong></p>
+        <p>Valor da venda: <strong>R$ ${v1.toFixed(2)}</strong></p>
+        <p>Percentual aplicado: <strong>${v2}%</strong></p>
+        <p>Comissão a receber: <strong>R$ ${valorComissao.toFixed(2)}</strong></p>
         `
     };
 };
