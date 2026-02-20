@@ -14,7 +14,7 @@ function calcularTotal (){
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>O valor total obtido foi R$ ${v1*v2} <p>
+        <p>O valor total obtido foi R$ ${v1*v2} </p>
         `
     };
 };
@@ -32,7 +32,7 @@ function desconto(){
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>Você recebeu um desconto de ${v2}% de R$ ${v1}. Preço total pago foi ${v1-desconto}R$<p>
+        <p>Você recebeu um desconto de ${v2}% de R$ ${v1}. Preço total pago foi ${v1-desconto}R$ </p>
         `
     };
 };
@@ -50,7 +50,7 @@ function juros(){
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>O acréscimo percentual aplicado com base no valor 02 foi: R$ ${acrescimo}. O valor total é: R$${v1 + acrescimo}<p>
+        <p>O acréscimo percentual aplicado com base no valor 02 foi: R$ ${acrescimo}. O valor total é: R$${v1 + acrescimo} </p>
         `
     };
 };
@@ -68,7 +68,7 @@ function comissao(){
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>Você recebeu ${v2}% de comissão sobre o valor ${v1}. A comissão obtida foi R$ ${percentual}<p>
+        <p>Você recebeu ${v2}% de comissão sobre o valor ${v1}. A comissão obtida foi R$ ${percentual} </p>
         `
     };
 };
@@ -86,7 +86,7 @@ function lucro(){
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>O preço da venda de um produto produto foi R$ ${v1} e o custo foi de R$ ${v2}. O lucro obtido foi ${lucro}<p>
+        <p>O preço da venda de um produto produto foi R$ ${v1} e o custo foi de R$ ${v2}. O lucro obtido foi ${lucro} </p>
         `
     };
 };
