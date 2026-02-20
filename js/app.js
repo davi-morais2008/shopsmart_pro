@@ -32,7 +32,7 @@ function desconto(){
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>Você recebeu um desconto de ${v2}% de R$ ${v1}. Preço total pago foi ${v1-desconto}R$ </p>
+        <p>Você recebeu um desconto de ${v2}% de R$ ${v1}. Preço total pago foi R$ ${v1-desconto} </p>
         `
     };
 };
@@ -41,12 +41,15 @@ function juros(){
     const v1 =  parseFloat(input01.value);
     const v2 = parseFloat(input02.value);
 
-    acrescimo = (v1 * v2)/100
+    
 
     if (isNaN(v1) || isNaN(v2)){
         alert('Valor 01 ou Valor 02 inválido. Digite um número.');
 
     } else {
+
+        let acrescimo = (v1 * v2)/100
+
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
@@ -59,16 +62,18 @@ function comissao(){
     const v1 =  parseFloat(input01.value);
     const v2 = parseFloat(input02.value);
 
-    percentual = (v1 * v2)/100
 
     if (isNaN(v1) || isNaN(v2)){
         alert('Valor 01 ou Valor 02 inválido. Digite um número.');
 
     } else {
+
+        let percentual = (v1 * v2)/100
+
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>Você recebeu ${v2}% de comissão sobre o valor ${v1}. A comissão obtida foi R$ ${percentual} </p>
+        <p>Você recebeu ${v2}% de comissão sobre o valor R$ ${v1}. A comissão obtida foi R$ ${percentual} </p>
         `
     };
 };
@@ -77,16 +82,19 @@ function lucro(){
     const v1 =  parseFloat(input01.value);
     const v2 = parseFloat(input02.value);
 
-    lucro = (v1 - v2)
+    
 
     if (isNaN(v1) || isNaN(v2)){
         alert('Valor 01 ou Valor 02 inválido. Digite um número.');
 
     } else {
+
+        let valorLucro = (v1 - v2)
+
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>O preço da venda de um produto produto foi R$ ${v1} e o custo foi de R$ ${v2}. O lucro obtido foi ${lucro} </p>
+        <p>O preço da venda de um produto produto foi R$ ${v1} e o custo foi de R$ ${v2}. O lucro obtido foi ${valorLucro} </p>
         `
     };
 };
