@@ -11,10 +11,13 @@ function calcularTotal (){
         alert('Valor 01 ou Valor 02 inválido. Digite um número.');
 
     } else {
+
+        let total = v1 * v2;
+
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>O valor total obtido foi R$ ${v1*v2} </p>
+        <p>O valor total obtido foi R$ ${total.toFixed(2)} </p>
         `
     };
 };
@@ -23,16 +26,21 @@ function desconto(){
     const v1 =  parseFloat(input01.value);
     const v2 = parseFloat(input02.value);
 
-    desconto = (v1 * v2)/100
+    
 
     if (isNaN(v1) || isNaN(v2)){
         alert('Valor 01 ou Valor 02 inválido. Digite um número.');
 
     } else {
+
+        let desconto = (v1 * v2) / 100;
+        let total = v1 - desconto;
+
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>Você recebeu um desconto de ${v2}% de R$ ${v1}. Preço total pago foi R$ ${v1-desconto} </p>
+        <p>Você recebeu ${v2}% de desconto sobre R$ ${v1.toFixed(2)}.</p>
+        <p>Preço final: R$ ${total.toFixed(2)}</p>
         `
     };
 };
@@ -49,11 +57,13 @@ function juros(){
     } else {
 
         let acrescimo = (v1 * v2)/100
+        let total = v1 + acrescimo
 
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>O acréscimo percentual aplicado com base no valor 02 foi: R$ ${acrescimo}. O valor total é: R$${v1 + acrescimo} </p>
+        <p>O acréscimo percentual aplicado com base no valor 02 foi: R$ ${acrescimo}. </p>
+        <p>O valor total é: R$${total.toFixed(2)}.</p>
         `
     };
 };
@@ -73,7 +83,7 @@ function comissao(){
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>Você recebeu ${v2}% de comissão sobre o valor R$ ${v1}. A comissão obtida foi R$ ${percentual} </p>
+        <p>Você recebeu ${v2}% de comissão sobre o valor R$ ${v1.toFixed(2)}. A comissão obtida foi R$ ${percentual.toFixed(2)} </p>
         `
     };
 };
@@ -94,7 +104,8 @@ function lucro(){
         resultado.style.display = 'flex';
         resultado.innerHTML =
         `
-        <p>O preço da venda de um produto produto foi R$ ${v1} e o custo foi de R$ ${v2}. O lucro obtido foi ${valorLucro} </p>
+        <p>O preço da venda de um produto produto foi R$ ${v1.toFixed(2)} e o custo foi de R$ ${v2.toFixed(2)}.</p> 
+        <p>O lucro obtido foi ${valorLucro.toFixed(2)}.</p>
         `
     };
 };
